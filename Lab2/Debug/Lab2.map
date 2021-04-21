@@ -3153,10 +3153,10 @@ END GROUP
 
 .inits          0x00000000080003ec       0x28
                 0x00000000080003ec                __data_regions_array_start = .
-                0x00000000080003ec        0x4 LONG 0x8004408 LOADADDR (.data)
+                0x00000000080003ec        0x4 LONG 0x8004410 LOADADDR (.data)
                 0x00000000080003f0        0x4 LONG 0x20000000 ADDR (.data)
                 0x00000000080003f4        0x4 LONG 0x20000080 (ADDR (.data) + SIZEOF (.data))
-                0x00000000080003f8        0x4 LONG 0x8004408 LOADADDR (.data_CCMRAM)
+                0x00000000080003f8        0x4 LONG 0x8004410 LOADADDR (.data_CCMRAM)
                 0x00000000080003fc        0x4 LONG 0x10000000 ADDR (.data_CCMRAM)
                 0x0000000008000400        0x4 LONG 0x10000000 (ADDR (.data_CCMRAM) + SIZEOF (.data_CCMRAM))
                 0x0000000008000404                __data_regions_array_end = .
@@ -3188,7 +3188,7 @@ END GROUP
 .flashtext
  *(.flashtext .flashtext.*)
 
-.text           0x0000000008000420     0x3fdd
+.text           0x0000000008000420     0x3fe5
  *(.text .text.*)
  .text.__initialize_args
                 0x0000000008000420       0x10 ./system/src/newlib/_syscalls.o
@@ -3600,63 +3600,63 @@ END GROUP
                 0x000000000800423c        0xb ./src/main.o
  *fill*         0x0000000008004247        0x1 
  .rodata.main.str1.4
-                0x0000000008004248       0x4a ./src/main.o
- *fill*         0x0000000008004292        0x2 
+                0x0000000008004248       0x52 ./src/main.o
+ *fill*         0x000000000800429a        0x2 
  .rodata.AHBPrescTable
-                0x0000000008004294       0x10 ./src/system_stm32f4xx.o
-                0x0000000008004294                AHBPrescTable
+                0x000000000800429c       0x10 ./src/system_stm32f4xx.o
+                0x000000000800429c                AHBPrescTable
  .rodata.log10.str1.4
-                0x00000000080042a4       0x4a /usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(lib_a-w_log10.o)
+                0x00000000080042ac       0x52 /usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(lib_a-w_log10.o)
                                           0x1 (size before relaxing)
  .rodata.__utoa.str1.1
-                0x00000000080042a4       0x25 /usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-utoa.o)
+                0x00000000080042ac       0x25 /usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-utoa.o)
  .rodata._ctype_
-                0x00000000080042c9      0x101 /usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-ctype_.o)
-                0x00000000080042c9                _ctype_
+                0x00000000080042d1      0x101 /usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-ctype_.o)
+                0x00000000080042d1                _ctype_
  .rodata._svfprintf_r.str1.1
-                0x00000000080043ca       0x11 /usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-nano-svfprintf.o)
+                0x00000000080043d2       0x11 /usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-nano-svfprintf.o)
  .rodata._printf_i.str1.1
-                0x00000000080043db       0x22 /usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000000080043e3       0x22 /usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-nano-vfprintf_i.o)
  *(vtable)
  *(.eh_frame*)
  *(.glue_7)
- .glue_7        0x00000000080043fd        0x0 linker stubs
+ .glue_7        0x0000000008004405        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x00000000080043fd        0x0 linker stubs
+ .glue_7t       0x0000000008004405        0x0 linker stubs
 
-.vfp11_veneer   0x0000000008004400        0x0
- .vfp11_veneer  0x0000000008004400        0x0 linker stubs
+.vfp11_veneer   0x0000000008004408        0x0
+ .vfp11_veneer  0x0000000008004408        0x0 linker stubs
 
-.v4_bx          0x0000000008004400        0x0
- .v4_bx         0x0000000008004400        0x0 linker stubs
+.v4_bx          0x0000000008004408        0x0
+ .v4_bx         0x0000000008004408        0x0 linker stubs
 
-.iplt           0x0000000008004400        0x0
- .iplt          0x0000000008004400        0x0 ./system/src/newlib/_startup.o
+.iplt           0x0000000008004408        0x0
+ .iplt          0x0000000008004408        0x0 ./system/src/newlib/_startup.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000008004400                . = ALIGN (0x4)
-                0x0000000008004400                __exidx_start = .
+                0x0000000008004408                . = ALIGN (0x4)
+                0x0000000008004408                __exidx_start = .
 
-.ARM.exidx      0x0000000008004400        0x8
+.ARM.exidx      0x0000000008004408        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
  .ARM.exidx.text.__udivmoddi4
-                0x0000000008004400        0x8 /usr/lib/gcc/arm-none-eabi/10.2.0/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
-                0x0000000008004408                __exidx_end = .
+                0x0000000008004408        0x8 /usr/lib/gcc/arm-none-eabi/10.2.0/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+                0x0000000008004410                __exidx_end = .
 
-.rel.dyn        0x0000000008004408        0x0
- .rel.iplt      0x0000000008004408        0x0 ./system/src/newlib/_startup.o
-                0x0000000008004408                . = ALIGN (0x4)
-                0x0000000008004408                _etext = .
-                0x0000000008004408                __etext = .
+.rel.dyn        0x0000000008004410        0x0
+ .rel.iplt      0x0000000008004410        0x0 ./system/src/newlib/_startup.o
+                0x0000000008004410                . = ALIGN (0x4)
+                0x0000000008004410                _etext = .
+                0x0000000008004410                __etext = .
 
-.data_CCMRAM    0x0000000010000000        0x0 load address 0x0000000008004408
+.data_CCMRAM    0x0000000010000000        0x0 load address 0x0000000008004410
  FILL mask 0xff
  *(.data.CCMRAM .data.CCMRAM.*)
                 0x0000000010000000                . = ALIGN (0x4)
-                0x0000000008004408                _sidata = LOADADDR (.data)
+                0x0000000008004410                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0x80 load address 0x0000000008004408
+.data           0x0000000020000000       0x80 load address 0x0000000008004410
  FILL mask 0xff
                 0x0000000020000000                _sdata = .
                 0x0000000020000000                __data_start__ = .
@@ -3685,7 +3685,7 @@ END GROUP
                 0x0000000020000080                _edata = .
                 0x0000000020000080                __data_end__ = .
 
-.igot.plt       0x0000000020000080        0x0 load address 0x0000000008004488
+.igot.plt       0x0000000020000080        0x0 load address 0x0000000008004490
  .igot.plt      0x0000000020000080        0x0 ./system/src/newlib/_startup.o
 
 .bss_CCMRAM     0x0000000010000000        0x0

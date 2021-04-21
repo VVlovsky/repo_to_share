@@ -207,8 +207,8 @@ void multi(MyFloat *mf1, MyFloat *mf2){
 
 
 void dev(MyFloat *mf1, MyFloat *mf2){
-	mf1->m = mf1->m * 100000;
-	mf1->e = mf1->e + 5;
+	mf1->m = mf1->m * 1000000;
+	mf1->e = mf1->e + 6;
 	int32_t m_new, e_new, s_new;
 	m_new = mf1->m / mf2->m;
 	e_new = mf1->e - mf2->e;
@@ -261,7 +261,7 @@ int main(void)
 
   MyFloat mf1;
   char* test1 = malloc(sizeof(int32_t)+1);
-  strcpy(test1, "4.002");
+  strcpy(test1, "-0.00978");
   trace_printf ("Float_1 = %s\n", test1);
   char* buf = malloc(strlen(test1));
   strcpy(buf, test1);
@@ -285,7 +285,7 @@ int main(void)
 
   MyFloat mf2;
   char* test2 = malloc(sizeof(int32_t)+1);
-  strcpy(test2, "0.03");
+  strcpy(test2, "8453.2145");
   trace_printf ("Float_2 = %s\n", test2);
 
   char* buf2 = malloc(strlen(test2));
